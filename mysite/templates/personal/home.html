@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div>
+        <h3>Registered Users</h3>
+        {% for account in accounts %}
+            {% include 'personal/snippets/home_snippet.html' with details=account %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
